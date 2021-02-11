@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  api:
+    image: openbankproject/obp-api
+      env_file: api.env
+    ports:
+      - "8080:8080"
+  api-explorer:
+    image: openbankproject/api-explorer
+      env_file: api-explorer.env
+    ports:
+      - "8080:8081"
+  api-manager:
+    image: openbankproject/api-manager
+      env_file: api-manager.env
+    ports:
+      - "8080:8082"
+
+volumes:
+  logvolume01: {}
