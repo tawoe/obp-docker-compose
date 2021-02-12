@@ -4,7 +4,7 @@ services:
     image: openbankproject/obp-api
     env_file: api.env
     volumes:
-      - "./docker_test.mv.db:/home/jetty/docker_test.mv.db:rw"
+      - "db:/var/lib/jetty/db:Z"
     ports:
       - "8080:8080"
   api-explorer:
