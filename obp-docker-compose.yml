@@ -4,7 +4,7 @@ services:
     image: openbankproject/obp-api
     env_file: api.env
     volumes:
-      - "db:/var/lib/jetty/db:Z"
+      - "./db:/var/lib/jetty/db:Z"
     ports:
       - "8080:8080"
   api-explorer:
